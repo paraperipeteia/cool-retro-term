@@ -27,17 +27,13 @@ ShaderEffect {
     property color _fontColor: appSettings.fontColor
     property color _lightColor: Utils.mix(_fontColor, _backgroundColor, 0.2)
 
-    property color frameColor: Utils.mix(
-        Utils.scaleColor(_lightColor, 0.2),
-        _staticFrameColor,
-        0.125 + 0.750 * ambientLight
-    )
+    property color frameColor: "#000000"
 
     property real screenCurvature: appSettings.screenCurvature * appSettings.screenCurvatureSize * terminalWindow.normalizedWindowScale
 
     property real frameShininess: appSettings.frameShininess
 
-    property real frameSize: appSettings.frameSize * terminalWindow.normalizedWindowScale
+    property real frameSize: 0.0;
 
     property real screenRadius: appSettings.screenRadius
 
